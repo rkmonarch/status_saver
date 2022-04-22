@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/rahulmachhi/status_saver/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "C:\\Users\\123\\Desktop\\projects\\status_saver\\status_saver_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/rahulmachhi/status_saver/android/app/src/main/res/values-night/styles.xml",
+                    "source": "C:\\Users\\123\\Desktop\\projects\\status_saver\\status_saver_flutter\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

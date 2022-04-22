@@ -1,4 +1,4 @@
-package com.hk.status_saver
+package com.rk.status_saver
 
 import io.flutter.embedding.android.FlutterActivity
 

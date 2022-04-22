@@ -37,7 +37,7 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
     final country = selectedCountry;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
@@ -70,14 +70,14 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
         child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.only(
-              top: 30.r,
-            ),
+                // top: 30.r,
+                ),
             height: 550.sm,
             decoration: BoxDecoration(
-              color: Colors.grey.shade300,
-              borderRadius: BorderRadius.circular(
-                19,
-              ),
+              color: Colors.white,
+              // borderRadius: BorderRadius.circular(
+              //   19,
+              //),
             ),
             width: 370.sm,
             padding: EdgeInsets.only(
@@ -99,93 +99,73 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
                           "Send a message to any number registred on\nWhatsapp without saving.\nYou can also send a message to yourself.",
                           style: GoogleFonts.montserrat(
                               color: Colors.black,
-                              fontSize: 15.sm,
+                              fontSize: 14.sm,
                               fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
                           height: 65.sm,
                         ),
-                        InkWell(
-                          onTap: () {
-                            onPressedShowBottomSheet();
-                          },
-                          child: Container(
-                            height: 45.sm,
-                            width: double.infinity,
-                            padding: EdgeInsets.only(
-                              top: 10.r,
-                              left: 10.r,
-                              right: 10.r,
-                              bottom: 10.r,
+                        Row(
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                onPressedShowBottomSheet();
+                              },
+                              child: Image.asset(
+                                country.flag,
+                                package: countryCodePackageName,
+                                width: 40,
+                              ),
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      country.flag,
-                                      package: countryCodePackageName,
-                                      width: 40,
-                                    ),
-                                    Text(
-                                      '${country.callingCode} ',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 15.sm),
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_drop_down,
-                                  color: Colors.black,
-                                  size: 20.sm,
-                                )
-                              ],
+                            SizedBox(
+                              width: 5.r,
                             ),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.transparent,
-                                border: Border.all(
-                                  color: Colors.black,
-                                )),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 25.sm,
-                        ),
-                        TextFormField(
-                          controller: phonenumber,
-                          keyboardType: TextInputType.number,
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return "Please Enter Mobile Number";
-                            } else {
-                              return null;
-                            }
-                          },
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.black),
+                            Text(
+                              '${country.callingCode} ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 15.sm),
+                            ),
+                            Expanded(
+                              child: TextFormField(
+                                controller: phonenumber,
+                                keyboardType: TextInputType.number,
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return "Please Enter Mobile Number";
+                                  } else {
+                                    return null;
+                                  }
+                                },
+                                decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      borderSide:
+                                          BorderSide(color: Colors.black),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      borderSide:
+                                          BorderSide(color: Colors.black),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      borderSide:
+                                          BorderSide(color: Colors.black),
+                                    ),
+                                    disabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(20),
+                                      borderSide:
+                                          BorderSide(color: Colors.black),
+                                    ),
+                                    contentPadding: EdgeInsets.only(left: 10.r),
+                                    hintText: "Phone Number",
+                                    hintStyle: GoogleFonts.montserrat(
+                                        color: Colors.black,
+                                        fontSize: 15.sm,
+                                        fontWeight: FontWeight.w400)),
                               ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              disabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.black),
-                              ),
-                              contentPadding: EdgeInsets.only(left: 10.r),
-                              hintText: "Phone Number",
-                              hintStyle: GoogleFonts.montserrat(
-                                  color: Colors.black,
-                                  fontSize: 15.sm,
-                                  fontWeight: FontWeight.w400)),
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 25.sm,
@@ -210,7 +190,7 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
                                 borderSide: BorderSide(color: Colors.black),
                               ),
                               contentPadding: EdgeInsets.only(left: 10.r),
-                              hintText: "Write Message (Optional)",
+                              hintText: "Write Message",
                               hintStyle: GoogleFonts.montserrat(
                                   color: Colors.black,
                                   fontSize: 15.sm,
@@ -234,7 +214,7 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
                                 child: Text(
                                   "SEND",
                                   style: GoogleFonts.montserrat(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 15.sm,
                                       fontWeight: FontWeight.w500),
                                 ),
@@ -242,7 +222,7 @@ class _SendmessageScreenState extends State<SendmessageScreen> {
                               width: 140.sm,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Colors.black,
+                                color: Color(0xff25D366),
                               ),
                             ),
                           ),

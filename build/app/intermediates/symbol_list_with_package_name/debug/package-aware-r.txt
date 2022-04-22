@@ -1,4 +1,4 @@
-com.hk.status_saver
+com.rk.status_saver
 attr activityAction
 attr activityName
 attr alpha

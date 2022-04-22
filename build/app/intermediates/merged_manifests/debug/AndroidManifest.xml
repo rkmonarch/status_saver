@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hk.status_saver"
+    package="com.rk.status_saver"
     android:versionCode="11"
     android:versionName="1.1.0" >
 
@@ -25,7 +25,7 @@
         android:label="HK Status Saver"
         android:requestLegacyExternalStorage="true" >
         <activity
-            android:name="com.hk.status_saver.MainActivity"
+            android:name="com.rk.status_saver.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"
@@ -64,7 +64,7 @@
 
         <provider
             android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
-            android:authorities="com.hk.status_saver.flutter.share_provider"
+            android:authorities="com.rk.status_saver.flutter.share_provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
