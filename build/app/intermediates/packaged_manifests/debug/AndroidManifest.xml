@@ -22,7 +22,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/launcher_icon"
-        android:label="HK Status Saver"
+        android:label="RK Status Saver"
         android:requestLegacyExternalStorage="true" >
         <activity
             android:name="com.rk.status_saver.MainActivity"

@@ -243,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Text(
-                "Made with love by Rahul Kulkarni",
+                "by Rahul Kulkarni",
                 style: GoogleFonts.montserrat(
                     color: Colors.black,
                     fontSize: 15.sm,

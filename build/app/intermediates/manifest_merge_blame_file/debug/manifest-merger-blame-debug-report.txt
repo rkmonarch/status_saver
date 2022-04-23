@@ -33,7 +33,7 @@
 22-->[androidx.core:core:1.7.0] C:\Users\123\.gradle\caches\transforms-2\files-2.1\b9a960218f5163997c0fdfa3d3078c0e\core-1.7.0\AndroidManifest.xml:24:18-86
 23        android:debuggable="true"
 24        android:icon="@mipmap/launcher_icon"
-25        android:label="HK Status Saver"
+25        android:label="RK Status Saver"
 26        android:requestLegacyExternalStorage="true" >
 27        <activity
 28            android:name="com.rk.status_saver.MainActivity"

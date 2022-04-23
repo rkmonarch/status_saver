@@ -8,7 +8,7 @@
    <application
                  android:requestLegacyExternalStorage="true"
 
-        android:label="HK Status Saver"
+        android:label="RK Status Saver"
         android:name="${applicationName}"
 
         android:icon="@mipmap/launcher_icon">
